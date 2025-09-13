@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+body {
+  font-family: var(--font-josefinSans);
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+@theme {
+  --primary: #fd4b23;
+  --color-primary: var(--primary);
+  --color-primary-foreground: white;
+  --color-primary-light: var(--primary);
+  --color-primary-dark: var(--primary);
+  --secondary: #7dcbd9;
+  --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary);
+  --color-secondary-foreground: white;
+  --color-secondary-dark: var(--secondary);
+  --tertiary: #3a86ff;
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-light: var(--tertiary);
+  --color-tertiary-foreground: white;
+  --color-black: #10121a;
+  --color-white: #f5f5f5;
+  --font-josefinSans: "Josefin Sans", sans-serif;
+  --animate-right: toRight 0.5s ease-in-out infinite alternate;
+
+  @keyframes toRight {
+    0% {
+      transform: translateX(20%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@layer utilities {
+  .title {
+    @apply mx-auto max-w-4xl text-3xl leading-12 md:leading-[88px] sm:text-5xl text-center font-bold lg:text-7xl text-white inline-block bg-clip-text;
+  }
+
+  .title-md {
+    @apply mx-auto max-w-4xl text-2xl leading-10 md:leading-[68px] sm:text-4xl text-center font-bold lg:text-6xl text-white inline-block bg-clip-text;
+  }
+
+  .title-xs {
+    @apply mx-auto max-w-4xl text-xl leading-8 md:leading-[48px] text-start font-bold text-white;
+  }
+
+  .desc {
+    @apply text-zinc-300 text-sm md:text-base lg:text-lg w-full max-w-2xl text-center;
+  }
+}
