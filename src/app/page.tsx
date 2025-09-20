@@ -218,9 +218,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button asChild variant={"outline"}>
-              Agendar uma conversa
-            </Button>
+            <Button>Agendar uma conversa</Button>
           </Link>
         </div>
         <LandingFooter />
